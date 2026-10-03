@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SANGARE DIGITAL SOLUTIONS accompagne les particuliers et les entreprises en développement web, installation de systèmes d'exploitation et déploiement de Microsoft Office.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_ML">
+  <meta property="og:title" content="SANGARE DIGITAL SOLUTIONS | Services numériques à Bamako">
+  <meta property="og:description" content="Développement web, installation de systèmes d’exploitation et configuration de Microsoft Office à Bamako, Mali.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;w=1200&amp;q=85">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#f4f6f2">
+  <title>SANGARE DIGITAL SOLUTIONS | Le numérique, simplement</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #18221d;
+      --muted: #66716b;
+      --paper: #f4f6f2;
+      --white: #fff;
+      --line: #dce2dc;
+      --green: #c9f36b;
+      --green-dark: #293e25;
+      --blue: #dcecf0;
+      --orange: #ef7854;
+      --font-body: "DM Sans", sans-serif;
+      --font-display: "Space Grotesk", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    .skip-link { position: absolute; top: -60px; left: 16px; z-index: 10; padding: 10px 14px; background: var(--ink); color: var(--white); }
+    .skip-link:focus { top: 12px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    a:focus-visible { outline: 3px solid var(--orange); outline-offset: 4px; }
+    .wrap { width: min(1160px, calc(100% - 48px)); margin: 0 auto; }
+    .topbar { border-bottom: 1px solid var(--line); }
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+    .brand { display: inline-flex; align-items: center; gap: 11px; flex-shrink: 0; }
+    .brand-mark {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border-radius: 11px;
+      background: var(--ink);
+      color: var(--green);
+      font: 700 17px var(--font-display);
+      letter-spacing: 0;
+    }
+    .brand-name { display: grid; gap: 2px; font: 700 15px/1.1 var(--font-display); letter-spacing: 0; }
+    .brand-name span:last-child { color: var(--muted); font: 600 11px/1.2 var(--font-body); letter-spacing: 0; }
+    .nav-links { display: flex; align-items: center; gap: 32px; color: #536058; font-size: 13px; font-weight: 600; }
+    .nav-links a:hover, .text-link:hover { color: #638927; }
+    .nav-cta, .button {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 19px;
+      border: 0;
+      border-radius: 5px;
+      background: var(--ink);
+      color: var(--white);
+      font: 700 13px var(--font-body);
+      transition: background .2s ease, transform .2s ease;
+    }
+    .nav-cta:hover, .button:hover { background: #34463a; transform: translateY(-2px); }
+    .arrow { font-size: 18px; line-height: 0; }
+
+    .hero { padding: 68px 0 74px; }
+    .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: 58px; }
+    .eyebrow { display: flex; align-items: center; gap: 9px; color: #4e6850; font-size: 12px; font-weight: 700; letter-spacing: 0; }
+    .eyebrow::before { content: ""; width: 25px; height: 2px; background: var(--orange); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0; }
+    h1 { max-width: 610px; margin: 21px 0 19px; font-size: clamp(38px, 5.3vw, 69px); line-height: 1.02; font-weight: 600; }
+    .title-highlight { position: relative; z-index: 0; white-space: nowrap; }
+    .title-highlight::after { position: absolute; z-index: -1; right: -4px; bottom: 3px; left: -4px; height: 17px; background: var(--green); content: ""; }
+    .hero-copy { max-width: 480px; margin-bottom: 28px; color: var(--muted); font-size: 16px; line-height: 1.75; }
+    .hero-actions { display: flex; align-items: center; gap: 23px; flex-wrap: wrap; }
+    .text-link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; transition: color .2s ease; }
+    .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 31px; color: var(--muted); font-size: 11px; }
+    .note-dot { width: 8px; height: 8px; border-radius: 50%; background: #72a842; box-shadow: 0 0 0 4px #e2edda; }
+    .hero-visual { position: relative; min-height: 430px; }
+    .hero-photo { position: absolute; inset: 0 18px 26px 0; overflow: hidden; border-radius: 6px; background: var(--blue); }
+    .hero-photo img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; }
+    .visual-index { position: absolute; top: 17px; left: 17px; padding: 9px 12px; background: var(--white); color: var(--ink); font: 700 10px var(--font-body); }
+    .visual-tag { position: absolute; right: 0; bottom: 0; width: 218px; padding: 18px 20px; background: var(--green); }
+    .visual-tag small { display: block; margin-bottom: 6px; font-size: 10px; font-weight: 700; }
+    .visual-tag strong { font: 600 19px/1.25 var(--font-display); }
+    .hero-orbit { position: absolute; top: -19px; right: 0; width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid #c9d4c9; border-radius: 50%; color: #6b806e; font-size: 19px; }
+
+    .service-band { padding: 48px 0 57px; background: var(--white); }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 27px; }
+    .section-head h2 { max-width: 530px; margin: 11px 0 0; font-size: 35px; line-height: 1.12; font-weight: 600; }
+    .section-head > p { max-width: 340px; margin: 0 0 3px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .service { min-height: 222px; padding: 24px 25px 23px 0; }
+    .service + .service { padding-left: 25px; border-left: 1px solid var(--line); }
+    .service-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 23px; }
+    .service-num { color: #79847d; font-size: 11px; font-weight: 700; }
+    .service-icon { width: 37px; height: 37px; display: grid; place-items: center; border-radius: 50%; background: #eef3e9; color: #486139; font-size: 17px; }
+    .service:nth-child(2) .service-icon { background: var(--blue); color: #386578; }
+    .service:nth-child(3) .service-icon { background: #fbe6dd; color: #a04b31; }
+    .service h3 { margin-bottom: 9px; font-size: 19px; font-weight: 600; }
+    .service p { max-width: 300px; margin-bottom: 16px; color: var(--muted); font-size: 14px; line-height: 1.65; }
+    .service .text-link { font-size: 12px; }
+
+    .approach { padding: 77px 0; }
+    .approach-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 85px; align-items: start; }
+    .approach h2 { margin: 13px 0 18px; font-size: 39px; line-height: 1.1; font-weight: 600; }
+    .approach-copy { max-width: 400px; margin-bottom: 23px; color: var(--muted); font-size: 14px; line-height: 1.8; }
+    .steps { border-top: 1px solid #cfd7ce; }
+    .step { display: grid; grid-template-columns: 44px 1fr; gap: 12px; padding: 18px 0; border-bottom: 1px solid #cfd7ce; }
+    .step-number { color: #64834c; font: 600 12px var(--font-display); }
+    .step h3 { margin: 0 0 5px; font-size: 16px; font-weight: 600; }
+    .step p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
+
+    .contact { padding: 0 0 72px; }
+    .contact-panel { display: flex; align-items: center; justify-content: space-between; gap: 30px; padding: 38px 43px; background: var(--green-dark); color: var(--white); }
+    .contact-panel .eyebrow { color: #d7e4cf; }
+    .contact-panel h2 { max-width: 550px; margin: 14px 0 0; font-size: 32px; line-height: 1.16; font-weight: 600; }
+    .contact-details { display: grid; gap: 8px; margin-top: 18px; color: #e2eadf; font-size: 13px; }
+    .contact-details a:hover { color: var(--green); }
+    .contact-panel .button { flex-shrink: 0; background: var(--green); color: var(--ink); }
+    .contact-panel .button:hover { background: #d8fa9e; }
+    footer { padding: 22px 0; border-top: 1px solid var(--line); }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; color: var(--muted); font-size: 11px; }
+    .footer-brand { color: var(--ink); font-weight: 700; }
+
+    @media (max-width: 850px) {
+      .nav-links { gap: 18px; }
+      .hero-grid { gap: 35px; }
+      .hero-visual { min-height: 390px; }
+      h1 { font-size: clamp(34px, 5.3vw, 56px); }
+      .approach-grid { gap: 45px; }
+    }
+    @media (max-width: 760px) {
+      .nav-links { display: none; }
+    }
+    @media (max-width: 650px) {
+      .wrap { width: min(100% - 36px, 520px); }
+      .nav { min-height: 68px; }
+      .nav-cta { min-height: 40px; padding: 0 12px; font-size: 11px; }
+      .brand-mark { width: 34px; height: 34px; }
+      .hero { padding: 47px 0 52px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 37px; }
+      h1 { max-width: 460px; font-size: clamp(34px, 9vw, 48px); }
+      .hero-copy { font-size: 14px; }
+      .hero-visual { min-height: 340px; }
+      .hero-photo { inset: 0 13px 22px 0; }
+      .visual-tag { width: 195px; padding: 15px 17px; }
+      .service-band { padding: 40px 0 42px; }
+      .section-head { display: block; margin-bottom: 18px; }
+      .section-head h2 { font-size: 30px; }
+      .section-head > p { margin-top: 12px; }
+      .service-grid { grid-template-columns: 1fr; }
+      .service { min-height: 0; padding: 20px 0 21px; }
+      .service + .service { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+      .service-top { margin-bottom: 13px; }
+      .service p { margin-bottom: 11px; }
+      .approach { padding: 53px 0; }
+      .approach-grid { grid-template-columns: 1fr; gap: 29px; }
+      .approach h2 { font-size: 33px; }
+      .contact { padding-bottom: 48px; }
+      .contact-panel { align-items: flex-start; flex-direction: column; padding: 27px 23px; }
+      .contact-panel h2 { font-size: 27px; }
+      .footer-row { align-items: flex-start; flex-direction: column; gap: 8px; }
+    }
+    @media (max-width: 360px) {
+      .nav { gap: 8px; }
+      .brand { gap: 8px; }
+      .brand-name { font-size: 13px; }
+      .brand-name span:last-child { font-size: 10px; }
+      .nav-cta { gap: 6px; padding: 0 8px; font-size: 10px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#accueil" aria-label="SANGARE DIGITAL SOLUTIONS, accueil">
+        <span class="brand-mark">S</span>
+        <span class="brand-name"><span>SANGARE DIGITAL</span><span>SOLUTIONS</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="#services">Nos services</a>
+        <a href="#approche">Notre approche</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Parlons de votre projet <span class="arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="hero" id="accueil">
+      <div class="wrap hero-grid">
+        <div class="hero-content">
+          <div class="eyebrow">VOTRE PARTENAIRE NUMÉRIQUE</div>
+          <h1>SANGARE DIGITAL<br><span class="title-highlight">SOLUTIONS</span></h1>
+          <p class="hero-copy">Le numérique, enfin simple. Nous concevons des sites web et accompagnons l’installation de vos systèmes et outils bureautiques avec des solutions adaptées à votre activité.</p>
+          <div class="hero-actions">
+            <a class="button" href="#services">Découvrir nos services <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="text-link" href="#approche">Comment nous travaillons <span class="arrow" aria-hidden="true">↘</span></a>
+          </div>
+          <div class="hero-note"><span class="note-dot" aria-hidden="true"></span> Un interlocuteur à votre écoute, à chaque étape</div>
+        </div>
+        <div class="hero-visual" aria-label="Espace de travail numérique">
+          <div class="hero-photo">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;w=1100&amp;q=85" alt="Ordinateur ouvert sur un espace de travail lumineux" fetchpriority="high">
+            <span class="visual-index">SDS / SOLUTIONS NUMÉRIQUES</span>
+          </div>
+          <span class="hero-orbit" aria-hidden="true">✳</span>
+          <div class="visual-tag"><small>DU CONSEIL À LA MISE EN SERVICE</small><strong>La bonne solution,<br>au bon moment.</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service-band" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div><div class="eyebrow">CE QUE NOUS FAISONS</div><h2>La technologie au service de vos idées.</h2></div>
+          <p>Un besoin précis ou un projet à construire ? Nous vous accompagnons avec des prestations concrètes et adaptées à votre quotidien.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service">
+            <div class="service-top"><span class="service-num">01 / WEB</span><span class="service-icon" aria-hidden="true">⌘</span></div>
+            <h3>Développement web</h3>
+            <p>Des sites vitrines professionnels, lisibles sur mobile et ordinateur, pour présenter clairement votre activité et vos services.</p>
+            <a class="text-link" href="#contact">Parler de votre site <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="service">
+            <div class="service-top"><span class="service-num">02 / SYSTÈME</span><span class="service-icon" aria-hidden="true">▣</span></div>
+            <h3>Installation de systèmes d’exploitation</h3>
+            <p>Installation et configuration de Windows, mise à jour des pilotes et vérification des fonctions essentielles de votre ordinateur.</p>
+            <a class="text-link" href="#contact">Préparer un ordinateur <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+          <article class="service">
+            <div class="service-top"><span class="service-num">03 / BUREAUTIQUE</span><span class="service-icon" aria-hidden="true">▤</span></div>
+            <h3>Installation de Microsoft Office</h3>
+            <p>Installation et configuration de Microsoft Office ou Microsoft 365 à partir d’une licence valide, puis vérification des applications.</p>
+            <a class="text-link" href="#contact">Configurer Office <span class="arrow" aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="approach" id="approche">
+      <div class="wrap approach-grid">
+        <div>
+          <div class="eyebrow">UN ACCOMPAGNEMENT CLAIR</div>
+          <h2>Une méthode simple,<br>un résultat soigné.</h2>
+          <p class="approach-copy">Nous commençons par comprendre votre besoin, puis nous convenons avec vous d’une solution et des étapes de réalisation.</p>
+          <a class="text-link" href="#contact">Échangeons sur votre besoin <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <div class="steps">
+          <article class="step"><span class="step-number">01</span><div><h3>Écoute et diagnostic</h3><p>Nous faisons le point sur votre objectif, votre équipement et vos contraintes.</p></div></article>
+          <article class="step"><span class="step-number">02</span><div><h3>Proposition adaptée</h3><p>Vous connaissez la prestation prévue avant le début de l’intervention.</p></div></article>
+          <article class="step"><span class="step-number">03</span><div><h3>Réalisation et vérification</h3><p>Nous effectuons le travail convenu et vérifions le bon fonctionnement avec vous.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-panel">
+        <div>
+          <div class="eyebrow">VOTRE PROJET COMMENCE ICI</div>
+          <h2>Un besoin numérique ?<br>Parlons-en simplement.</h2>
+          <div class="contact-details">
+            <a href="tel:+22382670434">Téléphone : +223 82 67 04 34</a>
+            <span>Adresse : Bamako, Mali</span>
+          </div>
+        </div>
+        <a class="button" href="tel:+22382670434">Appeler maintenant <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span class="footer-brand">SANGARE DIGITAL SOLUTIONS</span>
+      <span>Développement web · Systèmes · Bureautique</span>
+      <span>© <span id="year">2026</span> Tous droits réservés</span>
+    </div>
+  </footer>
+</body>
+</html>
